@@ -15,10 +15,10 @@ export const LogoSection = ({
     <section className="w-full bg-gradient-to-b from-background to-muted py-8 md:py-12 border-b border-border">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Logos Container */}
-        <div className="flex items-center justify-center gap-6 md:gap-12 mb-8">
+        <div className="flex items-center justify-center gap-8 md:gap-16 mb-12">
           {/* College Logo */}
           <div className="flex flex-col items-center">
-            <div className="w-20 h-20 md:w-28 md:h-28 bg-card border-2 border-primary/20 rounded-lg flex items-center justify-center shadow-md p-2">
+            <div className="w-24 h-24 md:w-32 md:h-32 bg-card border-2 border-primary/20 rounded-lg flex items-center justify-center shadow-md p-3">
               {collegeLogo ? (
                 <img
                   src={collegeLogo}
@@ -34,17 +34,17 @@ export const LogoSection = ({
                 </div>
               )}
             </div>
-            <p className="text-xs text-muted-foreground mt-2 text-center font-medium">
+            <p className="text-xs text-muted-foreground mt-3 text-center font-medium">
               BIET Jhansi
             </p>
           </div>
 
           {/* Divider */}
-          <div className="hidden md:block w-px h-20 bg-border"></div>
+          <div className="hidden md:block w-px h-24 bg-border"></div>
 
           {/* Club Logo */}
           <div className="flex flex-col items-center">
-            <div className="w-20 h-20 md:w-28 md:h-28 bg-card border-2 border-accent/20 rounded-lg flex items-center justify-center shadow-md p-2">
+            <div className="w-24 h-24 md:w-32 md:h-32 bg-card border-2 border-accent/20 rounded-lg flex items-center justify-center shadow-md p-3">
               {clubLogo ? (
                 <img
                   src={clubLogo}
@@ -60,7 +60,7 @@ export const LogoSection = ({
                 </div>
               )}
             </div>
-            <p className="text-xs text-muted-foreground mt-2 text-center font-medium">
+            <p className="text-xs text-muted-foreground mt-3 text-center font-medium">
               PF Council
             </p>
           </div>
