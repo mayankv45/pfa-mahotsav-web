@@ -97,7 +97,10 @@ export default function Index() {
   return (
     <Layout>
       {/* Logo Section */}
-      <LogoSection />
+      <LogoSection
+        collegeLogo="https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F4556d7141dd5464ca3b5f6d0e6363afc?format=webp&width=800"
+        clubLogo="https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F07029b41449949fa8292ae10fecbfcad?format=webp&width=800"
+      />
 
       {/* Hero Section - Mahotsav */}
       <section className="relative bg-gradient-to-br from-primary via-primary/90 to-accent/80 py-16 md:py-24 overflow-hidden">
