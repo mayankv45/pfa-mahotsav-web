@@ -254,7 +254,7 @@ export default function Index() {
               Featured Mahotsav Events
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore some of the exciting events happening during Mahotsav 2024
+              Explore some of the exciting events happening during Mahotsav 2026
             </p>
           </div>
 
