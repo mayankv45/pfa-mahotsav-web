@@ -113,7 +113,7 @@ export default function Index() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-block mb-4 px-4 py-2 bg-accent/20 rounded-full border border-accent/30">
             <span className="text-sm font-semibold text-accent-foreground">
-              Annual Festival
+              Annual Event
             </span>
           </div>
 
