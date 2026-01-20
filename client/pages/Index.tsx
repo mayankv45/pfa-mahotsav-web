@@ -122,7 +122,7 @@ export default function Index() {
           </h2>
 
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto font-light">
-            A 4-5 day celebration of creativity, art, and photography featuring
+            A 4 day celebration of creativity, art, and photography featuring
             solo and group events for passionate artists and photographers.
           </p>
 
