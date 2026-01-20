@@ -5,6 +5,7 @@ interface MemberCardProps {
   photo?: string;
   isFaculty?: boolean;
   designation?: string;
+  hideRole?: boolean;
 }
 
 export const MemberCard = ({
@@ -14,6 +15,7 @@ export const MemberCard = ({
   photo,
   isFaculty = false,
   designation,
+  hideRole = false,
 }: MemberCardProps) => {
   return (
     <div className={`text-center ${isFaculty ? "md:col-span-2" : ""}`}>
