@@ -103,16 +103,23 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
           {/* Mobile Navigation */}
           {isMenuOpen && (
             <nav className="md:hidden pb-4 space-y-1">
-              {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-muted hover:text-primary transition-colors"
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {navItems.map((item) => {
+                const isActive = location.pathname === item.path;
+                return (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                      isActive
+                        ? "bg-primary text-primary-foreground"
+                        : "text-foreground hover:bg-muted hover:text-primary"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                );
+              })}
             </nav>
           )}
         </div>
