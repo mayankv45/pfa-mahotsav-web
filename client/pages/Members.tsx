@@ -103,12 +103,12 @@ const facultyMembers: FacultyMember[] = [
   },
   {
     name: "Prof. Jitendra Kumar Sharma",
-    designation: "Director of BIET Jhansi",
+    designation: "President – Council of Student Activity",
     photo: "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F7c12237d68924ed09248f22a9323d471?format=webp&width=800&height=1200"
   },
   {
     name: "Prof. Yashpal Singh",
-    designation: "President – Council of Student Activity",
+    designation: "Director of BIET Jhansi",
     photo: "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2Fdb3fff36567145658f1d3808079427f7?format=webp&width=800&height=1200"
   },
 ];
