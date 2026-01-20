@@ -183,7 +183,7 @@ export default function Index() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-card border border-border rounded-lg p-8 hover:shadow-lg transition-shadow">
-              <div className="text-primary text-4xl font-bold mb-3">4-5</div>
+              <div className="text-primary text-4xl font-bold mb-3">4</div>
               <h3 className="font-display text-xl font-bold text-foreground mb-2">
                 Days of Celebration
               </h3>
