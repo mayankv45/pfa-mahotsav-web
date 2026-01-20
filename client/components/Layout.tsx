@@ -46,8 +46,8 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="flex items-center justify-between h-16">
             {/* Logo / Brand */}
             <Link to="/" className="flex items-center gap-2">
-              <div className="text-primary font-display font-bold text-xl">
-                PF Council
+              <div className="text-primary font-display font-bold text-xl hover:text-accent transition-colors cursor-pointer">
+                PFA
               </div>
             </Link>
 
