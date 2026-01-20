@@ -138,6 +138,7 @@ export default function Members() {
                 role=""
                 designation={member.designation}
                 isFaculty={true}
+                photo={member.photo}
               />
             ))}
           </div>
