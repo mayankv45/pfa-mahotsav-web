@@ -118,7 +118,7 @@ export default function Index() {
           </div>
 
           <h2 className="font-display text-4xl md:text-6xl font-bold text-primary-foreground mb-6 animate-fade-in">
-            MAHOTSAV 2024
+            MAHOTSAV 2026
           </h2>
 
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto font-light">
