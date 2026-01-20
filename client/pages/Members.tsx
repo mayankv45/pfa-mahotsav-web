@@ -165,17 +165,6 @@ export default function Members() {
         </div>
       </section>
 
-      {/* Note Section */}
-      <section className="py-12 bg-card border-t border-border">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm text-muted-foreground italic">
-            Photos will be added once images are provided. Department codes: CSE
-            - Computer Science, ECE - Electronics & Communication, EE -
-            Electrical Engineering, CE - Civil Engineering, ME - Mechanical
-            Engineering, CHE - Chemical Engineering.
-          </p>
-        </div>
-      </section>
     </Layout>
   );
 }
