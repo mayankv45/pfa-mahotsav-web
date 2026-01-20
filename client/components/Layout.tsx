@@ -5,6 +5,7 @@ import { Menu, X, Moon, Sun } from "lucide-react";
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const location = useLocation();
 
   // Initialize dark mode from localStorage
   useEffect(() => {
