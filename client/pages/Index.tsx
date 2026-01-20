@@ -145,7 +145,7 @@ export default function Index() {
           <div className="mt-12 grid grid-cols-3 gap-6 text-center">
             <div>
               <div className="text-3xl md:text-4xl font-bold text-accent-foreground">
-                4-5
+                4
               </div>
               <p className="text-sm text-primary-foreground/80 mt-2">Days</p>
             </div>
