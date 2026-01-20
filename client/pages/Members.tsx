@@ -136,7 +136,7 @@ export default function Members() {
             Faculty Advisors
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
             {facultyMembers.map((member, index) => (
               <MemberCard
                 key={index}
