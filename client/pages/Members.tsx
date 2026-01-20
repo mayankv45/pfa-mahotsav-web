@@ -158,7 +158,7 @@ export default function Members() {
 
                 <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ${role === "Advisory Board" ? "lg:grid-cols-3" : ""}`}>
                   {members.map((member, idx) => (
-                    <MemberCard key={idx} {...member} />
+                    <MemberCard key={idx} {...member} hideRole={true} />
                   ))}
                 </div>
               </div>
