@@ -5,20 +5,28 @@ interface Member {
   name: string;
   role: string;
   department: string;
+  photo?: string;
 }
 
 interface FacultyMember {
   name: string;
   designation: string;
+  photo?: string;
 }
 
 const membersByRole: Record<string, Member[]> = {
   "General Secretary": [
-    { name: "Devansh Varshney", role: "General Secretary", department: "CSE" },
+    {
+      name: "Devansh Varshney",
+      role: "General Secretary",
+      department: "CSE",
+      photo: "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2Fcaef87ae3f754eb5a75b25c4095d54c0?format=webp&width=800&height=1200"
+    },
     {
       name: "Vaishnavi Katiyar",
       role: "General Secretary",
       department: "ECE",
+      photo: "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F63d7e88fed76420988dfb3407152f0b1?format=webp&width=800&height=1200"
     },
   ],
   "Joint Secretary": [
@@ -26,24 +34,56 @@ const membersByRole: Record<string, Member[]> = {
       name: "Vishal Maddheshiya",
       role: "Joint Secretary",
       department: "EE",
+      photo: "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F1d9be5dd8b2143d0a6518e31a1f64668?format=webp&width=800&height=1200"
     },
-    { name: "Ankita Mishra", role: "Joint Secretary", department: "EE" },
+    {
+      name: "Ankita Mishra",
+      role: "Joint Secretary",
+      department: "EE",
+      photo: "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F2de142e373af47a194447db820ebb24e?format=webp&width=800&height=1200"
+    },
   ],
   "Head of Events": [
-    { name: "Raj Pandey", role: "Head of Events", department: "CE" },
-    { name: "Mahima Sahani", role: "Head of Events", department: "CSE" },
+    {
+      name: "Raj Pandey",
+      role: "Head of Events",
+      department: "CE",
+      photo: "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2Fbb91e570c15746c8b9b4df7adae915d8?format=webp&width=800&height=1200"
+    },
+    {
+      name: "Mahima Sahani",
+      role: "Head of Events",
+      department: "CSE",
+      photo: "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F6fe34f7a5865474cb2aaee97053dbd0d?format=webp&width=800&height=1200"
+    },
   ],
   "Creative Head": [
-    { name: "Yash Kushwaha", role: "Creative Head", department: "CSE" },
-    { name: "Ayush Singh", role: "Creative Head", department: "ME" },
+    {
+      name: "Yash Kushwaha",
+      role: "Creative Head",
+      department: "CSE",
+      photo: "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2Fceaab03fabf247b59aa093af7f3f5e30?format=webp&width=800&height=1200"
+    },
+    {
+      name: "Ayush Singh",
+      role: "Creative Head",
+      department: "ME",
+      photo: "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2Fbe37d979337440458209bf6bd9a50459?format=webp&width=800&height=1200"
+    },
   ],
   "Finance Head": [
     {
       name: "Abhishek Prajapati",
       role: "Finance Head",
       department: "EE",
+      photo: "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2Fd7f75c7985314588b28d9a2d31e74c46?format=webp&width=800&height=1200"
     },
-    { name: "Varun Kumar", role: "Finance Head", department: "CHE" },
+    {
+      name: "Varun Kumar",
+      role: "Finance Head",
+      department: "CHE",
+      photo: "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F3ff24a6318a24506a545dc843d251348?format=webp&width=800&height=1200"
+    },
   ],
   "Advisory Board": [
     { name: "Arin V. Tripathi", role: "Advisory Board", department: "ECE" },
