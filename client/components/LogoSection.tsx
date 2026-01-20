@@ -13,12 +13,19 @@ export const LogoSection = ({
 }: LogoSectionProps) => {
   return (
     <section className="w-full bg-gradient-to-b from-background to-muted py-8 md:py-12 border-b border-border">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Logos Container */}
-        <div className="flex items-center justify-center gap-8 md:gap-16 mb-12">
-          {/* College Logo */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Title at top center */}
+        <div className="text-center mb-8">
+          <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+            Photography & Fine Arts Sub Council
+          </h1>
+        </div>
+
+        {/* Logos with Title Container */}
+        <div className="flex items-center justify-center gap-6 md:gap-12 mb-8">
+          {/* College Logo - Smaller */}
           <div className="flex flex-col items-center">
-            <div className="w-24 h-24 md:w-32 md:h-32 bg-card border-2 border-primary/20 rounded-lg flex items-center justify-center shadow-md p-3">
+            <div className="w-16 h-16 md:w-20 md:h-20 bg-card border-2 border-primary/20 rounded-lg flex items-center justify-center shadow-md p-2">
               {collegeLogo ? (
                 <img
                   src={collegeLogo}
@@ -27,24 +34,20 @@ export const LogoSection = ({
                 />
               ) : (
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-display font-bold text-primary">
+                  <div className="text-lg md:text-xl font-display font-bold text-primary">
                     BIET
                   </div>
-                  <p className="text-xs text-muted-foreground mt-1">Jhansi</p>
                 </div>
               )}
             </div>
-            <p className="text-xs text-muted-foreground mt-3 text-center font-medium">
+            <p className="text-xs text-muted-foreground mt-2 text-center font-medium">
               BIET Jhansi
             </p>
           </div>
 
-          {/* Divider */}
-          <div className="hidden md:block w-px h-24 bg-border"></div>
-
-          {/* Club Logo */}
+          {/* Club Logo - Smaller */}
           <div className="flex flex-col items-center">
-            <div className="w-24 h-24 md:w-32 md:h-32 bg-card border-2 border-accent/20 rounded-lg flex items-center justify-center shadow-md p-3">
+            <div className="w-16 h-16 md:w-20 md:h-20 bg-card border-2 border-accent/20 rounded-lg flex items-center justify-center shadow-md p-2">
               {clubLogo ? (
                 <img
                   src={clubLogo}
@@ -53,24 +56,20 @@ export const LogoSection = ({
                 />
               ) : (
                 <div className="text-center">
-                  <div className="text-xl md:text-2xl font-display font-bold text-accent">
+                  <div className="text-base md:text-lg font-display font-bold text-accent">
                     PF
                   </div>
-                  <p className="text-xs text-muted-foreground mt-1">Council</p>
                 </div>
               )}
             </div>
-            <p className="text-xs text-muted-foreground mt-3 text-center font-medium">
+            <p className="text-xs text-muted-foreground mt-2 text-center font-medium">
               PF Council
             </p>
           </div>
         </div>
 
-        {/* Title and Description */}
+        {/* Description */}
         <div className="text-center">
-          <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">
-            Photography & Fine Arts Sub Council
-          </h1>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
             College BIET Jhansi
           </p>
