@@ -49,7 +49,9 @@ export const MemberCard = ({
         <p className="text-sm font-semibold text-accent mb-1">{designation}</p>
       ) : null}
 
-      <p className="text-base font-medium text-primary mb-1">{role}</p>
+      {!hideRole && (
+        <p className="text-base font-medium text-primary mb-1">{role}</p>
+      )}
 
       {department && (
         <p className="text-xs text-muted-foreground uppercase tracking-wide">
