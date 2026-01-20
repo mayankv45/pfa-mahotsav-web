@@ -101,8 +101,9 @@ const facultyMembers: FacultyMember[] = [
     designation: "Faculty Officer-in-Charge",
   },
   {
-    name: "Prof. [Faculty Name]",
+    name: "Prof. Yashpal Singh",
     designation: "President – Council of Student Activity",
+    photo: "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F7c12237d68924ed09248f22a9323d471?format=webp&width=800&height=1200"
   },
 ];
 
