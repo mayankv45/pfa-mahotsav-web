@@ -26,25 +26,7 @@ export default function Gallery() {
       {/* Filter Section */}
       <section className="py-8 md:py-12 bg-muted border-b border-border">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
-            {/* Year Filter */}
-            <div>
-              <label className="block text-sm font-semibold text-foreground mb-2">
-                Select Year
-              </label>
-              <select
-                value={selectedYear}
-                onChange={(e) => setSelectedYear(Number(e.target.value))}
-                className="px-4 py-2 rounded-lg border border-border bg-background text-foreground hover:border-primary transition-colors cursor-pointer"
-              >
-                {years.map((year) => (
-                  <option key={year} value={year}>
-                    {year}
-                  </option>
-                ))}
-              </select>
-            </div>
-
+          <div className="flex flex-col items-center justify-center">
             {/* Event Filter */}
             <div>
               <label className="block text-sm font-semibold text-foreground mb-2">
