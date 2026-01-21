@@ -30,11 +30,11 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Events", path: "/events" },
-    { name: "Members", path: "/members" },
-    { name: "Gallery", path: "/gallery" },
     { name: "Register", path: "/register" },
+    { name: "Events", path: "/events" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Members", path: "/members" },
+    { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
 
