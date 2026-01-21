@@ -254,7 +254,13 @@ export default function Index() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {mahotsavEvents.slice(0, 6).map((event) => (
-              <EventCard key={event.id} {...event} />
+              <EventCard
+                key={event.id}
+                {...event}
+                onClick={() => {
+                  window.location.href = `/events?event=${event.name.toLowerCase().replace(/\s+/g, '-')}`;
+                }}
+              />
             ))}
           </div>
 
