@@ -188,25 +188,26 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             {/* Contact Section */}
             <div>
               <h4 className="font-display text-base font-bold text-primary mb-4">
-                Contact
+                Follow Us
               </h4>
-              <p className="text-sm text-muted-foreground">
-                Email: pfcouncil@biet.ac.in
-              </p>
-              <div className="mt-4 flex gap-4">
+              <div className="flex gap-4">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/pfa_subcouncil_biet?igsh=MWcxNzY3MGk1c2ZjMA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-primary hover:text-accent transition-colors"
                   aria-label="Instagram"
                 >
                   <span className="text-sm">Instagram</span>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/fahbietjhs/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-primary hover:text-accent transition-colors"
-                  aria-label="Facebook"
+                  aria-label="LinkedIn"
                 >
-                  <span className="text-sm">Facebook</span>
+                  <span className="text-sm">LinkedIn</span>
                 </a>
               </div>
             </div>
