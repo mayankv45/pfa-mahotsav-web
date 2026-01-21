@@ -359,23 +359,6 @@ export default function Events() {
                 </ul>
               </div>
 
-              {/* Materials */}
-              <div>
-                <h3 className="font-display text-lg font-bold text-foreground mb-3">
-                  Materials Required
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {selectedEvent.materials.map((material, index) => (
-                    <span
-                      key={index}
-                      className="px-4 py-2 bg-muted border border-border rounded-full text-sm text-foreground"
-                    >
-                      {material}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
               {/* Past Images Placeholder */}
               <div>
                 <h3 className="font-display text-lg font-bold text-foreground mb-3">
