@@ -5,7 +5,7 @@ export default function Register() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary/80 to-accent/80 py-12 md:py-16">
+      <section className="bg-gradient-to-r from-primary/80 to-accent/80 py-8 md:py-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
             Register for Mahotsav
