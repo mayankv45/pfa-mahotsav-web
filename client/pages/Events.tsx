@@ -210,6 +210,19 @@ const events: Event[] = [
 export default function Events() {
   const [filter, setFilter] = useState<"all" | "solo" | "group">("all");
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    const eventParam = searchParams.get("event");
+    if (eventParam) {
+      const foundEvent = events.find(
+        (e) => e.name.toLowerCase().replace(/\s+/g, "-") === eventParam
+      );
+      if (foundEvent) {
+        setSelectedEvent(foundEvent);
+      }
+    }
+  }, [searchParams]);
 
   const filteredEvents = events.filter(
     (event) => filter === "all" || event.type === filter
