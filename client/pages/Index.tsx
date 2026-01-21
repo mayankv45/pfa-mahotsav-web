@@ -97,7 +97,7 @@ export default function Index() {
       />
 
       {/* Hero Section - Mahotsav */}
-      <section className="relative bg-gradient-to-br from-primary via-primary/90 to-accent/80 py-16 md:py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-primary via-primary/90 to-accent/80 py-8 md:py-12 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
