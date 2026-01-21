@@ -52,7 +52,7 @@ export default function Gallery() {
       <section className="py-16 md:py-24 bg-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-12">
-            {selectedEvent} {selectedYear}
+            {selectedEvent}
           </h2>
 
           {/* Image Grid Placeholder */}
@@ -73,7 +73,7 @@ export default function Gallery() {
           {/* Empty State Message */}
           <div className="mt-12 text-center">
             <p className="text-muted-foreground">
-              Gallery images for {selectedEvent} {selectedYear} will be displayed here. Check back after the event!
+              Gallery images for {selectedEvent} will be displayed here. Check back after the event!
             </p>
           </div>
         </div>
