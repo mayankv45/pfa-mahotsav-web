@@ -140,7 +140,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             {/* About Section */}
             <div>
               <h3 className="font-display text-lg font-bold text-primary mb-4">
-                PF Council
+                PFA Sub-Council
               </h3>
               <p className="text-sm text-muted-foreground">
                 Photography & Fine Arts Sub Council of BIET Jhansi
