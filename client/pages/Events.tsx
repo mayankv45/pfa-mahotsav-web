@@ -1,7 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { ImageIcon, X } from "lucide-react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 
 interface Event {
   id: string;
