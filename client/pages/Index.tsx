@@ -4,67 +4,61 @@ import { EventCard } from "@/components/EventCard";
 import { Link } from "react-router-dom";
 import { Camera, Palette, Sparkles, Users } from "lucide-react";
 
-// Sample Mahotsav Events Data
+// Mahotsav 2026 Events Data
 const mahotsavEvents = [
   {
     id: 1,
-    name: "Portrait Photography",
+    name: "Kirigami",
     description:
-      "Capture the essence of human emotions through black and white portrait photography.",
-    category: "Photography" as const,
+      "Paper cutting and folding art creating three-dimensional designs that stand away from the page. Unleash your imagination with nothing but paper and a knife.",
+    category: "Fine Arts" as const,
     type: "Solo" as const,
-    date: "Day 1",
-    time: "10:00 AM - 2:00 PM",
+    date: "Mahotsav Event",
   },
   {
     id: 2,
-    name: "Abstract Painting",
+    name: "Comicstan",
     description:
-      "Express your creativity through abstract art forms and unconventional painting techniques.",
+      "Create your own comic strip or graphic narrative showcasing your storytelling and artistic skills with your unique creativity.",
     category: "Fine Arts" as const,
     type: "Solo" as const,
-    date: "Day 2",
-    time: "2:00 PM - 6:00 PM",
+    date: "Mahotsav Event",
   },
   {
     id: 3,
-    name: "Photography Collage",
+    name: "Scandal",
     description:
-      "Create a collaborative photographic collage combining multiple images into one artistic piece.",
-    category: "Photography" as const,
-    type: "Group" as const,
-    date: "Day 2",
-    time: "10:00 AM - 4:00 PM",
+      "Create scandalous and hilarious news headlines using newspaper cutting. Fulfill your fantasy of becoming an editor for a day!",
+    category: "Fine Arts" as const,
+    type: "Solo" as const,
+    date: "Mahotsav Event",
   },
   {
     id: 4,
-    name: "Sculpture Workshop",
+    name: "Calligraphy",
     description:
-      "Craft three-dimensional art using various materials and sculptural techniques.",
+      "Beautiful handwriting art combining precision, creativity and elegance. Prove that with a pen in hand, the world is at your mercy.",
     category: "Fine Arts" as const,
-    type: "Group" as const,
-    date: "Day 3",
-    time: "1:00 PM - 5:00 PM",
+    type: "Solo" as const,
+    date: "Mahotsav Event",
   },
   {
     id: 5,
-    name: "Landscape Photography",
+    name: "Paper in Vogue",
     description:
-      "Explore the beauty of nature through landscape and outdoor photography.",
-    category: "Photography" as const,
-    type: "Solo" as const,
-    date: "Day 4",
-    time: "6:00 AM - 10:00 AM",
+      "Design creative fashion from recycled papers or newspapers. Let your imagination run wild and make a sustainable style statement.",
+    category: "Fine Arts" as const,
+    type: "Group" as const,
+    date: "Mahotsav Event",
   },
   {
     id: 6,
-    name: "Mixed Media Art",
+    name: "Spot Sketching",
     description:
-      "Combine different artistic mediums to create unique and expressive artworks.",
-    category: "Fine Arts" as const,
-    type: "Solo" as const,
-    date: "Day 5",
-    time: "3:00 PM - 7:00 PM",
+      "Real-time collaborative sketching where teams create artwork based on clues and themes. Bring out your hidden talent and creativity.",
+    category: "Photography" as const,
+    type: "Group" as const,
+    date: "Mahotsav Event",
   },
 ];
 
