@@ -135,16 +135,32 @@ export default function About() {
                     {event.description}
                   </p>
 
-                  {/* Photo Placeholder */}
-                  <div className="bg-muted border-2 border-dashed border-border rounded-lg p-12 text-center">
-                    <ImageIcon className="w-16 h-16 text-muted-foreground mx-auto mb-4 opacity-40" />
-                    <p className="text-muted-foreground font-medium">
-                      Event Photos Gallery
-                    </p>
-                    <p className="text-sm text-muted-foreground mt-2">
-                      Photos from past {event.name} events will be displayed here
-                    </p>
-                  </div>
+                  {/* Photo Gallery */}
+                  {event.images && event.images.length > 0 && (
+                    <div>
+                      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        {event.images.map((image, imgIndex) => (
+                          <button
+                            key={imgIndex}
+                            onClick={() => {
+                              setLightboxImageIndex(imgIndex);
+                              setLightboxEventType(event.name);
+                            }}
+                            className="relative bg-muted border border-border rounded-lg overflow-hidden aspect-square hover:shadow-lg transition-all group"
+                          >
+                            <img
+                              src={image}
+                              alt={`${event.name} photo ${imgIndex + 1}`}
+                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            />
+                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                              <span className="text-white text-sm font-semibold">View</span>
+                            </div>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
