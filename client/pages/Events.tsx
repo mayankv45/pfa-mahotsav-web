@@ -219,6 +219,7 @@ const events: Event[] = [
 export default function Events() {
   const [filter, setFilter] = useState<"all" | "solo" | "group">("all");
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
+  const [lightboxImageIndex, setLightboxImageIndex] = useState<number | null>(null);
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
@@ -232,6 +233,27 @@ export default function Events() {
       }
     }
   }, [searchParams]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (lightboxImageIndex === null || !selectedEvent?.images) return;
+
+      if (e.key === "ArrowLeft") {
+        setLightboxImageIndex((prev) =>
+          prev === 0 ? selectedEvent.images!.length - 1 : prev! - 1
+        );
+      } else if (e.key === "ArrowRight") {
+        setLightboxImageIndex((prev) =>
+          prev === selectedEvent.images!.length - 1 ? 0 : prev! + 1
+        );
+      } else if (e.key === "Escape") {
+        setLightboxImageIndex(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [lightboxImageIndex, selectedEvent]);
 
   const filteredEvents = events.filter(
     (event) => filter === "all" || event.type === filter
