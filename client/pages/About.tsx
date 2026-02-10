@@ -53,6 +53,7 @@ export default function About() {
         "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F997f27857e57412fb6d85ae3b25cbfa7?format=webp&width=800&height=1200",
         "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2Fde102c36dc96400796eaecbb2fdd6e52?format=webp&width=800&height=1200",
       ],
+      video: "https://cdn.builder.io/o/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F273c61fbe51f493e849d927d778d5266?alt=media&token=aad78f95-2126-4a2d-8f7b-15cacc3f4caf&apiKey=f8fe42ee1fe741dbada340ec755b5816",
     },
   ];
 
