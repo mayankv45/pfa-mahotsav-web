@@ -98,6 +98,15 @@ const events: Event[] = [
       "For any queries concern with team coordinator",
     ],
     materials: ["Calligraphy Pens", "Paper", "Ink"],
+    images: [
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2Fedde81af126849ffa3276d57f2e00e61?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F8e36ef5d5387423e954e47a2e7770180?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F2c5a9c7699ce48c6a8f96ccbcac9a905?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F8fb3738312744ee9b4b262d7923f15c5?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F8077f26b77cd4900b8ff6d8d57f28ff6?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2Fcd9c6f316d254b62a724184d080f87fd?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F1566b40de586421fbad8275f3fd555fe?format=webp&width=800&height=1200",
+    ],
   },
   {
     id: "paper-vogue",
