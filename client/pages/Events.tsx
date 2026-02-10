@@ -254,6 +254,7 @@ export default function Events() {
   const [filter, setFilter] = useState<"all" | "solo" | "group">("all");
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
   const [lightboxImageIndex, setLightboxImageIndex] = useState<number | null>(null);
+  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
