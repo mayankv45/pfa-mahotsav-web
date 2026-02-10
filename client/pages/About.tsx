@@ -162,6 +162,25 @@ export default function About() {
                       </div>
                     </div>
                   )}
+
+                  {/* Video Section */}
+                  {event.video && (
+                    <div className="mt-8">
+                      <h4 className="font-display text-xl font-bold text-foreground mb-4">
+                        Event Highlights Video
+                      </h4>
+                      <div className="relative w-full rounded-lg overflow-hidden border border-border bg-black aspect-video">
+                        <video
+                          controls
+                          className="w-full h-full"
+                          poster={event.images?.[0]}
+                        >
+                          <source src={event.video} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
