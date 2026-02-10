@@ -70,6 +70,14 @@ const events: Event[] = [
       "For any queries concern with team coordinator",
     ],
     materials: ["Newspapers", "Scissors", "Glue", "Poster Board"],
+    images: [
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F240d212fd8e34e46847342dbc8fe341e?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F91c5268436ec4d1ea41a4a739775e456?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2Fff4ea873f01f4cfcb52b535b932fa697?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F8156a54ffebd4fdd9840c6d0b0d22856?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F8d6ee35e7e9d4d3ea5fa03a4363e37c7?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F73e7fd19ba8c4850926e4594e3dd5ae6?format=webp&width=800&height=1200",
+    ],
   },
   {
     id: "caligraphy",
