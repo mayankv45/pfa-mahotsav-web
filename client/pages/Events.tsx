@@ -117,6 +117,14 @@ const events: Event[] = [
       "For any queries you can contact event coordinator",
     ],
     materials: ["Newspapers/Recycled Paper", "Scissors", "Glue", "Tape"],
+    images: [
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2Ffdb80a45a0c045808a9945a4e4cce090?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F7fffd32d516544f686c0637d4ac6f531?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2Fc3d0516269d245dc91ee330ad52e880f?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F7431790757884ac6bf480cdf1a6896b4?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F95837b580c0341aab4d8fe1a8379fe51?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2Fd414faedd8d149e7858929dd0c194cd1?format=webp&width=800&height=1200",
+    ],
   },
   {
     id: "spot-sketch",
