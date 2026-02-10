@@ -174,8 +174,10 @@ export default function About() {
                       <div className="relative w-full rounded-lg overflow-hidden border border-border bg-black aspect-video">
                         <video
                           controls
+                          controlsList="nodownload"
                           className="w-full h-full"
                           poster={event.images?.[0]}
+                          onContextMenu={(e) => e.preventDefault()}
                         >
                           <source src={event.video} type="video/mp4" />
                           Your browser does not support the video tag.
