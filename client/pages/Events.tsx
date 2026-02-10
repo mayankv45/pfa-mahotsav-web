@@ -403,23 +403,32 @@ export default function Events() {
                 </ul>
               </div>
 
-              {/* Past Images Placeholder */}
-              <div>
-                <h3 className="font-display text-lg font-bold text-foreground mb-3">
-                  Past Event Highlights
-                </h3>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {[1, 2, 3].map((item) => (
-                    <div
-                      key={item}
-                      className="bg-muted border-2 border-dashed border-border rounded-lg aspect-square flex flex-col items-center justify-center"
-                    >
-                      <ImageIcon className="w-8 h-8 text-muted-foreground/40 mb-2" />
-                      <p className="text-xs text-muted-foreground">Photo {item}</p>
-                    </div>
-                  ))}
+              {/* Past Images */}
+              {selectedEvent.images && selectedEvent.images.length > 0 && (
+                <div>
+                  <h3 className="font-display text-lg font-bold text-foreground mb-3">
+                    Past Event Highlights
+                  </h3>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    {selectedEvent.images.map((image, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setLightboxImageIndex(index)}
+                        className="relative bg-muted border border-border rounded-lg overflow-hidden aspect-square hover:shadow-lg transition-all group"
+                      >
+                        <img
+                          src={image}
+                          alt={`Event highlight ${index + 1}`}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                          <span className="text-white text-sm font-semibold">Click to zoom</span>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
 
               {/* Register Button */}
               <div className="pt-4 border-t border-border">
