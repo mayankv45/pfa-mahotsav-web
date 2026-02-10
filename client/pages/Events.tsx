@@ -495,6 +495,8 @@ export default function Events() {
               src={selectedEvent.images[lightboxImageIndex]}
               alt="Zoomed event image"
               className="max-w-full max-h-full object-contain"
+              draggable={false}
+              onContextMenu={(e) => e.preventDefault()}
             />
 
             {/* Close Button */}
