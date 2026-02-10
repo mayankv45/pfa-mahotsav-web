@@ -184,6 +184,14 @@ const events: Event[] = [
       "For any queries concern with team coordinator",
     ],
     materials: ["Chalk", "Paints", "Brushes"],
+    images: [
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F7f14795f992047b9997cdcbc577884e1?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2Fc34f55cb157a4e9a91529902e7511dcc?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2Fef6351f931d046e18c3e60830c190ee7?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F2979faacd1cb48c29186e0154166d5a7?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F9f1238e599464cef8524589231099c23?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F2bc736b4a44144109a0da71295a76481?format=webp&width=800&height=1200",
+    ],
   },
   {
     id: "masquerade",
