@@ -172,6 +172,14 @@ const events: Event[] = [
       "For any queries concern with team coordinator",
     ],
     materials: ["Face Paints", "Brushes", "Sponges", "Palette"],
+    images: [
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F6d6b277b561f49a9b08df1e2fe0cfcb7?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2Fe5622a1b15ab4bc4948a06c92839bc07?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F9a9db741ffcb471a9f164a3ed4649851?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2Ff204629a8e7841a680499e8c241320a7?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F4c0316983c1e49beb0e54e53c2d9fbf3?format=webp&width=800&height=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Ff8fe42ee1fe741dbada340ec755b5816%2F23a4c7c151ed412e872ffcc4a1669948?format=webp&width=800&height=1200",
+    ],
   },
   {
     id: "road-painting",
