@@ -10,6 +10,7 @@ interface Event {
   description: string;
   rules: string[];
   materials: string[];
+  images?: string[];
 }
 
 const events: Event[] = [
