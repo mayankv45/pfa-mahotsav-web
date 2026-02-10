@@ -2,6 +2,7 @@ import { Layout } from "@/components/Layout";
 import { ImageIcon, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
+import { RegistrationForm } from "@/components/RegistrationForm";
 
 interface Event {
   id: string;
