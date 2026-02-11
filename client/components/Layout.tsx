@@ -35,9 +35,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Register", path: "/register" },
     { name: "Events", path: "/events" },
-    { name: "Gallery", path: "/gallery" },
     { name: "Members", path: "/members" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
@@ -176,10 +174,10 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                 </li>
                 <li>
                   <Link
-                    to="/gallery"
+                    to="/about"
                     className="hover:text-primary transition-colors"
                   >
-                    Gallery
+                    About
                   </Link>
                 </li>
               </ul>
