@@ -469,13 +469,12 @@ export default function Events() {
 
               {/* Register Button */}
               <div className="pt-4 border-t border-border">
-                <Link
-                  to="/register"
-                  onClick={() => setSelectedEvent(null)}
+                <button
+                  onClick={() => setShowRegistrationForm(true)}
                   className="block w-full bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors text-center"
                 >
                   Register for {selectedEvent.name}
-                </Link>
+                </button>
               </div>
             </div>
           </div>
@@ -563,6 +562,20 @@ export default function Events() {
             </div>
           </div>
         </div>
+      )}
+
+      {/* Registration Form Modal */}
+      {showRegistrationForm && selectedEvent && (
+        <RegistrationForm
+          eventId={selectedEvent.id}
+          eventName={selectedEvent.name}
+          eventType={selectedEvent.type}
+          onClose={() => setShowRegistrationForm(false)}
+          onSuccess={() => {
+            setSelectedEvent(null);
+            setShowRegistrationForm(false);
+          }}
+        />
       )}
     </Layout>
   );
