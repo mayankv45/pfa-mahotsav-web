@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { X } from "lucide-react";
 
 interface Member {
@@ -10,14 +10,18 @@ interface RegistrationFormProps {
   eventId: string;
   eventName: string;
   eventType: "solo" | "group";
+  description: string;
   onClose: () => void;
   onSuccess: () => void;
 }
+
+const BRANCH_OPTIONS = ["CSE", "IT", "AI-ML", "ECE", "EE", "ME", "CE", "CHE"];
 
 export const RegistrationForm = ({
   eventId,
   eventName,
   eventType,
+  description,
   onClose,
   onSuccess,
 }: RegistrationFormProps) => {
@@ -25,22 +29,54 @@ export const RegistrationForm = ({
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
 
+  // Extract team size from description
+  const teamSize = useMemo(() => {
+    if (eventType === "solo") return 1;
+
+    // Look for common patterns in description
+    const patterns = [
+      /(?:should consist of|consists of|team of|maximum)\s+(\d+)\s+members/i,
+      /(\d+)-(\d+)\s+members/i,
+    ];
+
+    for (const pattern of patterns) {
+      const match = description.match(pattern);
+      if (match) {
+        if (match[2]) {
+          // For "2-3 members", use the higher number
+          return Math.max(parseInt(match[1]), parseInt(match[2]));
+        }
+        return parseInt(match[1]);
+      }
+    }
+
+    // Default to 4 if no pattern found
+    return 4;
+  }, [description, eventType]);
+
   // Solo event form
   const [soloParticipantName, setSoloParticipantName] = useState("");
+  const [soloParticipantEmail, setSoloParticipantEmail] = useState("");
   const [soloParticipantPhone, setSoloParticipantPhone] = useState("");
+  const [soloParticipantBranch, setSoloParticipantBranch] = useState("");
 
   // Group event form
   const [leaderName, setLeaderName] = useState("");
+  const [leaderEmail, setLeaderEmail] = useState("");
   const [leaderPhone, setLeaderPhone] = useState("");
-  const [members, setMembers] = useState<Member[]>([
-    { name: "", phone: "" },
-    { name: "", phone: "" },
-    { name: "", phone: "" },
-  ]);
+  const [leaderBranch, setLeaderBranch] = useState("");
+  const [members, setMembers] = useState<Member[]>(
+    Array.from({ length: teamSize - 1 }, () => ({ name: "", phone: "" }))
+  );
 
   const validatePhone = (phone: string) => {
     const phoneRegex = /^[0-9]{10}$/;
     return phoneRegex.test(phone.replace(/\D/g, ""));
+  };
+
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   };
 
   const handleMemberChange = (index: number, field: "name" | "phone", value: string) => {
@@ -59,8 +95,18 @@ export const RegistrationForm = ({
       return;
     }
 
+    if (!validateEmail(soloParticipantEmail)) {
+      setError("Valid email address is required");
+      return;
+    }
+
     if (!validatePhone(soloParticipantPhone)) {
       setError("Valid 10-digit phone number is required");
+      return;
+    }
+
+    if (!soloParticipantBranch) {
+      setError("Branch selection is required");
       return;
     }
 
@@ -75,7 +121,9 @@ export const RegistrationForm = ({
           eventName,
           eventType,
           participantName: soloParticipantName,
+          participantEmail: soloParticipantEmail,
           participantPhone: soloParticipantPhone,
+          participantBranch: soloParticipantBranch,
         }),
       });
 
@@ -105,8 +153,18 @@ export const RegistrationForm = ({
       return;
     }
 
+    if (!validateEmail(leaderEmail)) {
+      setError("Valid email address for team leader is required");
+      return;
+    }
+
     if (!validatePhone(leaderPhone)) {
       setError("Valid 10-digit phone number for team leader is required");
+      return;
+    }
+
+    if (!leaderBranch) {
+      setError("Branch selection is required");
       return;
     }
 
@@ -132,7 +190,9 @@ export const RegistrationForm = ({
           eventName,
           eventType,
           participantName: leaderName,
+          participantEmail: leaderEmail,
           participantPhone: leaderPhone,
+          participantBranch: leaderBranch,
           members: members,
         }),
       });
@@ -194,8 +254,8 @@ export const RegistrationForm = ({
               Register for {eventName}
             </h2>
             <p className="text-primary-foreground/80 text-sm mt-1">
-              {eventType === "solo" ? "Solo Event" : "Group Event (4 Members)"}
-            </p>
+            {eventType === "solo" ? "Solo Event" : `Group Event (${teamSize} Members)`}
+          </p>
           </div>
           <button
             onClick={onClose}
@@ -230,6 +290,19 @@ export const RegistrationForm = ({
 
               <div>
                 <label className="block text-sm font-medium text-foreground mb-1">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  value={soloParticipantEmail}
+                  onChange={(e) => setSoloParticipantEmail(e.target.value)}
+                  placeholder="Enter your email address"
+                  className="w-full px-3 py-2 border border-border rounded-lg bg-card text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-1">
                   Phone Number
                 </label>
                 <input
@@ -240,6 +313,24 @@ export const RegistrationForm = ({
                   maxLength={10}
                   className="w-full px-3 py-2 border border-border rounded-lg bg-card text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                 />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-1">
+                  Branch
+                </label>
+                <select
+                  value={soloParticipantBranch}
+                  onChange={(e) => setSoloParticipantBranch(e.target.value)}
+                  className="w-full px-3 py-2 border border-border rounded-lg bg-card text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                >
+                  <option value="">Select your branch</option>
+                  {BRANCH_OPTIONS.map((branch) => (
+                    <option key={branch} value={branch}>
+                      {branch}
+                    </option>
+                  ))}
+                </select>
               </div>
 
               <button
@@ -273,6 +364,19 @@ export const RegistrationForm = ({
 
               <div>
                 <label className="block text-sm font-medium text-foreground mb-1">
+                  Team Leader Email
+                </label>
+                <input
+                  type="email"
+                  value={leaderEmail}
+                  onChange={(e) => setLeaderEmail(e.target.value)}
+                  placeholder="Enter team leader email"
+                  className="w-full px-3 py-2 border border-border rounded-lg bg-card text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-1">
                   Team Leader Phone Number
                 </label>
                 <input
@@ -285,9 +389,27 @@ export const RegistrationForm = ({
                 />
               </div>
 
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-1">
+                  Team Leader Branch
+                </label>
+                <select
+                  value={leaderBranch}
+                  onChange={(e) => setLeaderBranch(e.target.value)}
+                  className="w-full px-3 py-2 border border-border rounded-lg bg-card text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                >
+                  <option value="">Select branch</option>
+                  {BRANCH_OPTIONS.map((branch) => (
+                    <option key={branch} value={branch}>
+                      {branch}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
               <div className="bg-muted p-4 rounded-lg my-4">
                 <p className="text-sm text-muted-foreground">
-                  Team Members (3 more members)
+                  Team Members ({members.length} more {members.length === 1 ? "member" : "members"})
                 </p>
               </div>
 

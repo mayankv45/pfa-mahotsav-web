@@ -49,9 +49,9 @@ router.get("/event/:eventId", (req: Request, res: Response) => {
 
 // Create a new registration
 router.post("/", (req: Request, res: Response) => {
-  const { eventId, eventName, eventType, participantName, participantPhone, members } = req.body;
+  const { eventId, eventName, eventType, participantName, participantEmail, participantPhone, participantBranch, members } = req.body;
 
-  if (!eventId || !eventName || !participantName || !participantPhone) {
+  if (!eventId || !eventName || !participantName || !participantEmail || !participantPhone || !participantBranch) {
     return res.status(400).json({ error: "Missing required fields" });
   }
 
@@ -70,7 +70,9 @@ router.post("/", (req: Request, res: Response) => {
     eventName,
     eventType,
     participantName,
+    participantEmail,
     participantPhone,
+    participantBranch,
     members: eventType === "group" ? members : undefined,
     registeredAt: new Date().toISOString(),
   };

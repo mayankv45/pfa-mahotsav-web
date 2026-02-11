@@ -570,6 +570,7 @@ export default function Events() {
           eventId={selectedEvent.id}
           eventName={selectedEvent.name}
           eventType={selectedEvent.type}
+          description={selectedEvent.description}
           onClose={() => setShowRegistrationForm(false)}
           onSuccess={() => {
             setSelectedEvent(null);
