@@ -3,7 +3,9 @@ import { X } from "lucide-react";
 
 interface Member {
   name: string;
+  email: string;
   phone: string;
+  branch: string;
 }
 
 interface RegistrationFormProps {
@@ -66,7 +68,7 @@ export const RegistrationForm = ({
   const [leaderPhone, setLeaderPhone] = useState("");
   const [leaderBranch, setLeaderBranch] = useState("");
   const [members, setMembers] = useState<Member[]>(
-    Array.from({ length: teamSize - 1 }, () => ({ name: "", phone: "" }))
+    Array.from({ length: teamSize - 1 }, () => ({ name: "", email: "", phone: "", branch: "" }))
   );
 
   const validatePhone = (phone: string) => {
@@ -79,7 +81,7 @@ export const RegistrationForm = ({
     return emailRegex.test(email);
   };
 
-  const handleMemberChange = (index: number, field: "name" | "phone", value: string) => {
+  const handleMemberChange = (index: number, field: "name" | "email" | "phone" | "branch", value: string) => {
     const updatedMembers = [...members];
     updatedMembers[index] = { ...updatedMembers[index], [field]: value };
     setMembers(updatedMembers);
@@ -173,8 +175,16 @@ export const RegistrationForm = ({
         setError(`Member ${i + 1} name is required`);
         return;
       }
+      if (!validateEmail(members[i].email)) {
+        setError(`Valid email address for member ${i + 1} is required`);
+        return;
+      }
       if (!validatePhone(members[i].phone)) {
         setError(`Valid 10-digit phone number for member ${i + 1} is required`);
+        return;
+      }
+      if (!members[i].branch) {
+        setError(`Branch selection for member ${i + 1} is required`);
         return;
       }
     }
@@ -429,6 +439,15 @@ export const RegistrationForm = ({
                       className="w-full px-3 py-2 border border-border rounded-lg bg-card text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary text-sm"
                     />
                     <input
+                      type="email"
+                      value={member.email}
+                      onChange={(e) =>
+                        handleMemberChange(index, "email", e.target.value)
+                      }
+                      placeholder="Email address"
+                      className="w-full px-3 py-2 border border-border rounded-lg bg-card text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+                    />
+                    <input
                       type="tel"
                       value={member.phone}
                       onChange={(e) =>
@@ -442,6 +461,20 @@ export const RegistrationForm = ({
                       maxLength={10}
                       className="w-full px-3 py-2 border border-border rounded-lg bg-card text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary text-sm"
                     />
+                    <select
+                      value={member.branch}
+                      onChange={(e) =>
+                        handleMemberChange(index, "branch", e.target.value)
+                      }
+                      className="w-full px-3 py-2 border border-border rounded-lg bg-card text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+                    >
+                      <option value="">Select branch</option>
+                      {BRANCH_OPTIONS.map((branch) => (
+                        <option key={branch} value={branch}>
+                          {branch}
+                        </option>
+                      ))}
+                    </select>
                   </div>
                 </div>
               ))}
