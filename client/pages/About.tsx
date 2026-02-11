@@ -6,6 +6,21 @@ export default function About() {
   const [lightboxImageIndex, setLightboxImageIndex] = useState<number | null>(null);
   const [lightboxEventType, setLightboxEventType] = useState<string | null>(null);
 
+  // Prevent body scroll when lightbox is open
+  useEffect(() => {
+    if (lightboxImageIndex !== null) {
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    };
+  }, [lightboxImageIndex]);
+
   const events = [
     {
       name: "Kati Patang",

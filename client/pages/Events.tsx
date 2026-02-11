@@ -257,6 +257,22 @@ export default function Events() {
   const [showRegistrationForm, setShowRegistrationForm] = useState(false);
   const [searchParams] = useSearchParams();
 
+  // Prevent body scroll when any modal is open
+  useEffect(() => {
+    const isModalOpen = selectedEvent || lightboxImageIndex !== null || showRegistrationForm;
+    if (isModalOpen) {
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    };
+  }, [selectedEvent, lightboxImageIndex, showRegistrationForm]);
+
   useEffect(() => {
     const eventParam = searchParams.get("event");
     if (eventParam) {
