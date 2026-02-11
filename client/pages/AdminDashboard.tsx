@@ -30,8 +30,8 @@ export default function AdminDashboard() {
     e.preventDefault();
     setError("");
 
-    // Check password (default: admin123)
-    if (password === process.env.REACT_APP_ADMIN_PASSWORD || password === "admin123") {
+    // Check password
+    if (password === "mvmahotsav2026") {
       setIsAuthenticated(true);
       setPassword("");
       fetchRegistrations();
@@ -45,7 +45,7 @@ export default function AdminDashboard() {
     try {
       const response = await fetch("/api/registrations", {
         headers: {
-          Authorization: `Bearer ${process.env.REACT_APP_ADMIN_PASSWORD || "admin123"}`,
+          Authorization: `Bearer mvmahotsav2026`,
         },
       });
 
@@ -71,7 +71,7 @@ export default function AdminDashboard() {
       const response = await fetch(`/api/registrations/${id}`, {
         method: "DELETE",
         headers: {
-          Authorization: `Bearer ${process.env.REACT_APP_ADMIN_PASSWORD || "admin123"}`,
+          Authorization: `Bearer mvmahotsav2026`,
         },
       });
 
@@ -150,10 +150,6 @@ export default function AdminDashboard() {
                   Login
                 </button>
               </form>
-
-              <p className="text-xs text-muted-foreground text-center mt-4">
-                Default password: admin123
-              </p>
             </div>
           </div>
         </section>

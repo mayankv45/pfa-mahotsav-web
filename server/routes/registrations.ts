@@ -16,8 +16,8 @@ function ensureRegistrationsFile() {
 // Get all registrations (admin only)
 router.get("/", (req: Request, res: Response) => {
   const adminToken = req.headers.authorization;
-  
-  if (adminToken !== `Bearer ${process.env.ADMIN_TOKEN || "admin123"}`) {
+
+  if (adminToken !== `Bearer mvmahotsav2026`) {
     return res.status(403).json({ error: "Unauthorized" });
   }
 
@@ -31,8 +31,8 @@ router.get("/", (req: Request, res: Response) => {
 // Get registrations for a specific event
 router.get("/event/:eventId", (req: Request, res: Response) => {
   const adminToken = req.headers.authorization;
-  
-  if (adminToken !== `Bearer ${process.env.ADMIN_TOKEN || "admin123"}`) {
+
+  if (adminToken !== `Bearer mvmahotsav2026`) {
     return res.status(403).json({ error: "Unauthorized" });
   }
 
@@ -88,8 +88,8 @@ router.post("/", (req: Request, res: Response) => {
 // Delete a registration (admin only)
 router.delete("/:id", (req: Request, res: Response) => {
   const adminToken = req.headers.authorization;
-  
-  if (adminToken !== `Bearer ${process.env.ADMIN_TOKEN || "admin123"}`) {
+
+  if (adminToken !== `Bearer mvmahotsav2026`) {
     return res.status(403).json({ error: "Unauthorized" });
   }
 
