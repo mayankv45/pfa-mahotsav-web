@@ -35,7 +35,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist   # if Vite
+          path: ./dist/spa   # if Vite
           # path: ./build   # if CRA
 
       - name: Deploy
